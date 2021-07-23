@@ -2,8 +2,8 @@ function calculate(inputValue) {
     const expression = /\+|\-|\*|\//
     const numbers = inputValue.split(expression)
 
-    const numberA = parseInt(numbers[0])
-    const numberB = parseInt(numbers[1])
+    const numberA = parseFloat(numbers[0])
+    const numberB = parseFloat(numbers[1])
 
     const operation = inputValue.match(expression)
 
@@ -35,8 +35,8 @@ function calculate(inputValue) {
     }
 
     updateResult(result)
-
 }
+
 function updateResult(result) {
     const element = document.getElementById('result')
     

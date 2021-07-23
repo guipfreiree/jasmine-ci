@@ -10,8 +10,6 @@ describe('main.js', function() {
             expect(window.updateResult).toHaveBeenCalledWith('Expression not recognized.')
             
             expect(window.updateResult).toHaveBeenCalledTimes(1)
-
-
         }) 
 
         it('validates expression when second number is invalid', function() {

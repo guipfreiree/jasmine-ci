@@ -4,11 +4,17 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "karma start"
+    "test": "karma start",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:chrome": "cypress run --browser chrome",
+    "cy:run:firefox": "cypress run --browser firefox"
   },
   "author": "Guilherme Freire",
   "license": "ISC",
   "devDependencies": {
+    "cypress": "^8.0.0",
+    "cypress-cucumber-preprocessor": "^4.1.4",
     "istanbul": "^0.4.5",
     "jasmine-core": "^3.8.0",
     "karma": "^6.3.4",
@@ -17,7 +23,10 @@
     "karma-coverage": "^2.0.3",
     "karma-jasmine": "^4.0.1",
     "karma-jasmine-matchers": "^4.0.2",
+    "prettier": "^2.3.2",
     "puppeteer": "^10.1.0"
   },
-  "dependencies": {}
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
 }
